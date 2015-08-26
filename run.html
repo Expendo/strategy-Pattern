@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>策略模式动画</title>
+    <script src="run.js">
+
+    </script>
+    <style>
+       #div{
+           width:100px;
+           height:100px;position:absolute;background:blue;
+       }
+        #div1{width:100px;
+            height:100px;position:absolute;top:200px;background:#cd5c5c;}
+    </style>
+</head>
+<body>
+<div id="div">我是第一</div>
+<div id="div1">我是第2</div>
+<script>
+    var div=document.getElementById('div');
+    var animate =new Animate(div);
+    animate.start('left',1000,2000,'easeIn');
+
+
+    var div1=document.getElementById('div1');
+    var animateTop =new Animate(div1);
+    animateTop.start('top',500,2000,'strongEaseIn');
+</script>
+</body>
+</html>
